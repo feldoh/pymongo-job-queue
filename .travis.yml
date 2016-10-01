@@ -9,4 +9,5 @@ script:
   - coverage run pymjq/test.py
   - coverage combine
 #  - coverage report --omit '/home/travis/virtualenv/python2.7.9/*'
-after_success: codecov
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
